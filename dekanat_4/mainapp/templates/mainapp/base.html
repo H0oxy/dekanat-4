@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|capfirst }} | decanat</title>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="{% url 'mainapp:index' %}">Главная</a></li>
+
+        {% if user.is_stuff %}
+            <li><a href="#">Создать группу</a></li>
+        {% endif %}
+    </ul>
+</header>
+<div>
+    {% block content %}
+
+    {% endblock %}
+</div>
+
+
+</body>
+</html>
